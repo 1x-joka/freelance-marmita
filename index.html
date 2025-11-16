@@ -13,16 +13,15 @@
         <p>Sua comida quentinha e rápida no conforto da sua casa já!</p>
         <nav>
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Métodos de Pagamento</a></li>
-                <li><a href="#">Carrinho</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#info">Início</a></li>
+                <li><a href="#comidas">Serviços</a></li>
+                <li><a href="#" id="linkpagamento">Pagamento</a></li> 
+                <li><a href="#" id="linkcarrinho">Carrinho</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="info">
+        <section id="info">
             <div class="conteudo">
                 <div class="infotexto">
                     <h2>Qualidade e Sabor Tradicional</h2>
@@ -33,7 +32,7 @@
                     </div>
                 </div>
                 <div class="infoimagem">
-                    <img src="" alt="">
+                    <img src="img/marmita.jpg" alt="marmita com arroz, feijao, bife e salada">
                 </div>
             </div>
             <nav>
@@ -41,12 +40,12 @@
                 <a href="#semanal">Semanal</a>
             </nav>
         </section>
-        <section class="comidas">
+        <section id="comidas">
             <h2 id="diario">Menu do Dia</h2>
             <section class="diario">
 
             <div class="carditem">
-                <img src="" alt="">
+                <img src="img/feijoada.jpg" alt="feijoada">
                 <h3>Feijoada Completa</h3>
                 <p class="preco">R$ 35,90</p>
                 <p class="descricao">Arroz, feijão preto, farofa, couve e lombo suíno</p>
@@ -57,7 +56,7 @@
             </div>
 
             <div class="carditem">
-                <img src="" alt="">
+                <img src="img/bifemilanesa.jpeg" alt="bifemilanesa">
                 <h3>Bife à Mileanesa</h3>
                 <p class="preco">R$ 34,90</p>
                 <p class="descricao">Delicioso bife empanado e frito, com purê de batatas</p>
@@ -71,7 +70,7 @@
                 <h2 id="semanal">Cardárpio Semanal (Opções Fixas)</h2>
                 <div class="cardapiosemanal">
                     <div class="carditem">
-                        <img src="" alt="">
+                        <img src="img/fileparmegiana.jpeg" alt="fileparmegiana">
                         <h3>Filé à Parmegiana</h3>
                         <p class="preco">R$ 38,00</p>
                         <p class="descricao">Filé mignon com molho de tomate e queijo</p>
@@ -82,7 +81,7 @@
                     </div>
 
                     <div class="carditem">
-                        <img src="" alt="">
+                        <img src="img/lasanhafrango.jpeg" alt="lasanhafrango">
                         <h3>Lasanha de Frango</h3>
                         <p class="preco">R$ 35,00</p>
                         <p class="descricao">Massa fresca, molho branco e frango desfiado</p>
@@ -93,7 +92,7 @@
                     </div>
 
                     <div class="carditem">
-                        <img src="" alt="">
+                        <img src="img/estrogonofe.jpeg" alt="estrogonofe">
                         <h3>Estrogonofe de Carne</h3>
                         <p class="preco">R$ 33,50</p>
                         <p class="descricao">Carne em cubos, creme de leite e champignon</p>
@@ -109,7 +108,7 @@
             <h2>Bebidas Geladas</h2>
             <div class="bebidas">
                 <div class="carditem">
-                    <img src="" alt="">
+                    <img src="img/sucolaranja.jpg" alt="sucolaranja">
                     <h3>Suco de Laranja</h3>
                     <p class="preco">R$ 7,50</p>
                     <div class="acoes">
@@ -119,7 +118,7 @@
                 </div>
 
                 <div class="carditem">
-                    <img src="" alt="">
+                    <img src="img/coca.jpg" alt="coca">
                     <h3>Coca-Cola lata</h3>
                     <p class="preco">R$ 6,00</p>
                     <div class="acoes">
@@ -129,7 +128,7 @@
                 </div>
 
                 <div class="carditem">
-                    <img src="" alt="">
+                    <img src="img/agua.jpg" alt="agua">
                     <h3>Água Mineral</h3>
                     <p class="preco">R$ 3,00</p>
                     <div class="acoes">
@@ -139,12 +138,39 @@
                 </div>
             </div>
         </section>
-        <section class="met-pag">
-            
+        <section id="met-pag">
+            <div class="metdisplay">
+                <h3>Métodos de Pagamento Aceitos</h3>
+                <div class="cardmet">
+                    <img src="img/debito.png" alt="Debito">
+                    <p>Cartão de Débito</p>
+                    <p>Aceitamos Visa, Master, Elo. Pagamento na entrega ou online</p>
+                </div>
+                <div class="cardmet">
+                    <img src="img/credito.jpg" alt="Credito">
+                    <p>Cartão de Crédito</p>
+                    <p>Aceitamos Visa, Master, Elo. Pagamento na entrega ou online</p>
+                </div>
+                <div class="cardmet">
+                    <img src="img/pix.png" alt="PIX">
+                    <p>PIX</p>
+                    <p>Pagamento instantâneo. Chave disponível na finalização do pedido</p>
+                </div>
+                <div class="cardmet">
+                    <img src="img/dinheiro.jpg" alt="Dinheiro">
+                    <p>Dinheiro</p>
+                    <p>Pague ao entregador. Não esqueça de informar o troco</p>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy;Ponto das Marmitas</p>
+        <div class="social">
+            <a href="#" aria-label="WhatsApp"><i class="whatsapp"></i></a>
+            <a href="#" aria-label="Instagram"><i class="instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="facebook"></i></a>
+        </div>
     </footer>
 </body>
 </html>

@@ -1,5 +1,383 @@
+/* Configurações Globais para mexer com variáveis */
+:root {
+    --primaria: #4f804f;
+    --secundaria: #8ebc8e;
+    --acento: #e6b800;
+    --fundo-claro: #f4f4f4;
+    --texto-escuro: #333;
+    --texto-claro: #fff;
+    --sombra-card: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Para começar com essas predefinições */
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--texto-escuro);
+    background-color: var(--fundo-claro); 
+}
+
+a {
+    text-decoration: none;
+    color: var(--texto-claro);
+    transition: color 0.3s;
+}
+
+/* Navegação Principal */
+header {
+    background-color: var(--secundaria);
+    color: var(--texto-claro);
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fixa o header no topo */
+    width: 100%; /* Ocupa a largura total */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    top: 0;
+    left: 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+header p {
+    margin-bottom: 15px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    flex-wrap: wrap;
+}
+
+header nav ul li a {
+    padding: 8px 15px;
+    display: block;
+    font-weight: bold;
+    color: var(--texto-claro); 
+}
+
+header nav ul li a:hover {
+    color: var(--acento);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--primaria);
+    color: var(--texto-claro);
+    text-align: center;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social a {
+    color: var(--texto-claro);
+    margin-left: 15px;
+    font-size: 1.5em; 
+}
+
+/* Layout Principal */
+main {
+    padding-top: 150px; 
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    font-size: 2em;
+    color: var(--primaria);
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--acento);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Seção INFO */
+.info {
+    padding: 40px 0 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--sombra-card);
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.infotexto {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.infotexto h2 {
+    color: var(--texto-escuro);
+    border-bottom: none;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.infobotoes button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.infobotoes .sobre {
+    background-color: #eee;
+    color: var(--texto-escuro);
+}
+
+.infobotoes .contato {
+    background-color: var(--primaria);
+    color: var(--texto-claro);
+}
+
+.infoimagem img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    background-color: #ccc;
+    min-height: 200px;
+    width: 100%;
+    display: block;
+}
+
+.info nav {
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.info nav a {
+    text-decoration: none;
+    color: var(--primaria);
+    margin: 0 15px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.info nav a:hover {
+    color: var(--acento); 
+    border-bottom: 2px solid var(--acento);
+}
+
+/* MENU */
+.comidas {
+    text-align: center;
+    background-color: #fff;
+}
+
+/* Containers de Grid para Diário e Semanal */
+.diario, .cardapiosemanal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+/* Regra específica para o grid de itens de bebidas */
+.bebidas > div { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Estilizando os Card's */
+.carditem {
+    background-color: var(--fundo-claro);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+    text-align: center;
+    padding-bottom: 15px;
+    transition: transform 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.carditem:hover {
+    transform: translateY(-5px);
+}
+
+.carditem img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    background-color: #ccc;
+}
+
+.carditem h3 {
+    color: var(--primaria);
+    margin: 10px 0 5px;
+    font-size: 1.3em;
+    padding: 0 15px;
+}
+
+.carditem .preco {
+    font-size: 1.5em;
+    color: var(--acento);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.carditem .descricao {
+    font-size: 0.9em;
+    color: #666;
+    min-height: 40px;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.acoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 15px;
+    margin-top: auto;
+}
+
+.acoes input[type="number"] {
+    width: 50px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.acoes button {
+    background-color: var(--primaria);
+    color: var(--texto-claro);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    flex-grow: 1;
+    transition: background-color 0.3s;
+}
+
+.acoes button:hover {
+    background-color: #3b603b;
+}
+
+/* Seção de Pagamento */
+.met-pag {
+    background-color: var(--fundo-claro);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.pagamento-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.metdisplay {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.metdisplay h3 {
+    width: 100%;
+    color: var(--primaria);
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.cardmet {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 45%;
+    min-width: 180px;
+}
+
+.cardmet img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.cardmet p:first-of-type {
+    color: var(--acento);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cardmet p:last-of-type {
+    font-size: 0.85em;
+    color: #666;
+}
+
+/* Responsividade (disponibilidade do site ajustado para quaisquer dispostivips) */
+@media (max-width: 900px) {
+    .pagamento-container {
+        flex-direction: column;
+    }
+
+    .cardmet {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .cardmet {
+        width: 100%;
+    }
 }
